@@ -1,0 +1,216 @@
+BASICS:
+
+Computers are very dumb machines, they only do what they are told to do.
+The basic operation of a computer will form what is known as the computer's instruction set.
+To solve a problem using a computer, you must provide a solution to the problem by sending instructions to the instruction set,
+ a computer program sends the instructions necessary to solve a specific problem.
+
+The approach or method that is used to solve the problem is known as an algorithm. So if we were to create a program that tests if a number is odd or even
+    then the state that solve the problem becomes the program. The method that is used to test if the number is even or odd is the algorithm.
+To write a program, you need to write the instructions necessary to implement the algorithm. These instructions would be expressed in the statement 
+    of a perticular computer language such as C++, Java, Objective-C or C.
+
+High-level programming language make it easier to write programs, which are opposite of assembly language. C is a higher level programming language that
+    describes actions in a more abstract form.
+
+Compilers: A program that translate that high level language source code into the detailed set of machine language instructions the computer requires, the
+            program does the high level thinking and the compiler generates the tedious instructions to CPU. Compilers will also check that your program 
+            has a valid syntex for the programming language that you are compiling, it finds errors and it reports them to you and doesnt produce an 
+            executable unit you fix them.
+
+
+THE ACT OF WRITING A "PROGRAM" THAT CAN BE BROKEN DOWN INTO MULTIPLE STEPS -->
+    1. Define the program Objective.
+        Understand the requirement of the program
+        Get a clear idea of what you want the program to accomplish
+    2. Design the program.
+        Decide how trhe program will meet the above requirements
+        What  should the userinterface be? 
+        How should the program be organized?
+    3. Write the code.
+        Start implementation, translate the design in the syntax of C
+        You need to use a text editor to create what is called a SOURCE CODE file.
+    4. Compile.
+        Translate the source code into machine code
+        Consists of detailed instructions to the CPU expressed in a numeric code
+    5. Run the program.
+        The executable file is a program you can Run
+    6. Test and Debug the program.
+        Just because the program is running does not mean it works as implemented
+        Need to test, to see that your program does what it is supposed to do
+            Debugging is the process of finding and fixing program errors.
+            Making mistakes is a natural part of learning.
+    7. Maintain and modify the program. 
+        Programs are released and used by many people.
+        Have to continue to fix new bugs or add new features.
+
+
+
+                                Preprocessor-
+The #include Statement:
+the #include statement is a Preprocessor directive.
+#include<stdio.h>
+It is not strictly part of the executable program, however,the program wont work without it.
+The symbol #indicates this is a preprocessing directive:
+    1.an instruction to your compiler to do something before compiling the source code.
+    2.many preprocessing directives.
+    3.are usually some at the beginning of the program soruce file, but tey can be anywhere.
+    4.similar to the import statement in Java.
+In the above example, the compiler is instructed to "include" in your program the contents of the file with the name 'stdio.h'.
+    a.called a header file because it is usually included at the head of a program source file.
+    b.'.h' extension.
+
+                                Header Files-
+a.Header files define information about some of the functions that are provided by that file.
+b.stdio.h is the standard C library header and provieds functionality for displaying output,
+    among many other things.
+c.we need to include this file in a program when using the printf() function from the standard library.
+d.stdio.h contains the information that the compiler needs to understand what printf().
+    means, as well as other functions that dead with input and output.
+e.stdio, is short for standard input/output.
+
+Header Files specify information that the compiler that the compiler uses to integrate any predefined functions within a program.
+We can also create our own header files!
+#include<stdio.h> can also be written as #include"stadio.h".
+
+                                Displaying Output-
+printf()is a standard library function.
+It outputs information to the command line (the standard output stream, which is the command line by default).
+The information displayed is in based on what appears between the parentheses that immediately follow the function name(printf).
+
+                                User Input-
+It is very useful to ask the user enter data into a program and it is always done through terminal/console.
+The C library contains several inputs functions, and scanf() is the most general of them, it can read a variety of formats.
+Reads the input from te standard input stream "stdin" and scans that input according to the format provided. Format can be simple 
+    constant string, but you can specify %s, %d, %c, %f etc to read strings, integers, characters and floats.
+If the stdin is input from the keyboard then text is read in because the keys generate text characters: letter, digits and punctuation.
+    When we enter the integer 2014, we type the characters 2 0 1 and 4.
+    If we want to store that as numerical value rather than as a string, our program has to convert the string character-by-character to a numerical value and this is the job
+    of the scanf function.
+Like printf(), scanf() uses a control string followed by a list of arguments. Control String indicates the destination data types for the input stream of character.
+The printf() function uses variable names, constants, and expressions as its arguments list.
+the scanf() function uses pointers to variables. However we dont have to know anything about pointers to use the function.
+
+Three Rules about scanf()-->
+    1. Returns the number of items that it successfully reads.
+    2. If you use scanf() to read valuefor one of the basic variable type we've discussed, precede the variable name with an '&'.
+    3. If you use scanf() to read string into a character array, dont use an &.
+
+The scanf() function uses whitespace (newlines, tabs and spaces) to decide how to divide the input into seperate fields.
+scaf() is the inverse of printf(), which converts integers, floating-point numbers, characters and C string to text that is to be displayed onscreen.
+
+
+                                Variables-
+Remember that a program needs to store the instructions of its program and the data that it acts upon while your computer is executing that program.
+    1.The information is stored in memory(RAM).
+    2.RAM's contents are lost when the computer is turned off.
+    3.Hard Drive store presistent data.
+You can think of RAM as an ordered sequence of boxex-
+    1.The box is full when it represents 1 or the box is empty when it represents 0.
+    2.Each box represents one binary digit, either 0 or 1.
+    3.Each box is called a bit.
+Bits in memory are grouped into sets of eight(byte)
+    Each byte has been labeled with a number (address)
+    The address of a byte uniquely references that bite in your computer's memory.
+Again, memory consists of a large number of bits that are in groups of eight (called bytes) and each byte has a unique address.
+
+Constants are the types of data that do not change and retain their values throughout the life of the program.
+Variables are types of data may change or be assigned values as the program runs.
+Variables are the names you give to computer memory locations which are used to store values in computer program.
+
+What are Enums?
+A data type that allows a programmer to define a variable and specify the valid valus that could be stored into that variable.
+    Can create a variable 'myColor' and it can only store one of the color among red, purple and black.
+You first have to define the enum type and give it a name.
+    Initiated by the keyword enum.
+    Then the name of the enumerated data type.
+    Then list of identifiers (enclosed in a set of curly braces) that define the permissible values that can be assigned to the type
+EXAMPLE: enum myColor{red,pruple,black};
+
+
+                        Operators-
+Operators are functions that use a symbolic name, performs mathematical or logical functions. Operators are predefined.
+A logical operator(sometimes called a "Boolean Operator") is a operator that returns a Boolean result that's based on the Boolean result of one or two other expressions.
+An arithmetic operator is a mathematical function that takes two operands and performs a calculation on them.
+Other operators include assignment, relational (<,>,!=), bitwise (<<,>>,~) 
+
+Statement form tha basic program teps of C, and most statement are constructed from expressions. Statements are the building blocks of a program. A program is a series of statement with
+    syntax ending with semicolon (and sometimes not).
+An Expression consists of a combination of operators and operands.
+    An operands are what an operator operates on.
+    Operands can be constants, variable, or combination of the two.
+    Every Expression has a value.
+
+
+                    Two Dimensional Arrays-
+The types of array that we have been exposed so far are all linear arrays, single dimension.
+The C along with some other languages allows arrays to be of any dimension to be defined. Two dimensional are the most common.
+You can visualize a two-dimensional array as a rectangular arrangement like rows and columns in a spreadsheet. One of the most
+    natural applications for a two-dimensional array arises in the case of a matrix.
+Two dimensional arrays are decleared the same way that one dimensional arrays are.
+
+EXAMPLE: int variableName[int1][int2]
+
+Two dimensioanl arrays can be initialized in the same manner of a one dimensioanl array.
+When listing elements for initialization, the values are listed by row.
+    The difference is that you put the initial values for each row between braces, {}, and then enclose all the rows between braces.
+    int numbers[3][4] = {
+        {10,20,30,40},           //Values of the first row
+        {15,25,35,45},           //Values for second row
+        {55,15,33,48}           ////Values for third row
+    };
+Commas are required after each breace that closes off a row, except in the case ofthe final row.
+
+Subscripts can also be used in the initialization list, in a like mmanner to single-dimensioanl arrays.
+int matrix [4][3] = {[0][0]=1, [1][1]=5, [2][2]=9};
+Initializes the three indicated elements of matrix to the specified values.
+    Unspecified elements are set to zero by default.
+    Each set of values that initializes the elements in a row is between breaces.
+    The entire initization goes between another pair of braces
+    The values of a row are seperated by Commas
+    Each set of row values is seperated from the next set by a comma
+
+EVERYTHING MENTIONED SO FAR ABOUT TWO-DIMENSIONAL ARRAYS CAN BE GENERALIZED TO THREE-DIMENSIOANL ARRAYS AND FURTHER.
+
+
+                        Function-
+A function is a self-contained unit of program code designed to accomplish a perticular task. Syntax rules define the structure of a function and how it can be used.
+The following are the advantages of using Function:
+    Allows for the divide and conquer strategy
+        It is very difficult to write an entrie program as a single large main function as it becomes difficult to test, debug and maintain.
+    With divide and conquer, tasks can be divided into several independent subtasks.
+        Reduces the overall complexity
+        Seperate functions are written for each subtask
+        We can further divide each subtask into smaller subtasks, further reducing the complexity.
+    Reduce deplication of code 
+        Saves you time when writing, testing and debugging code
+        Reduces the size of the source code
+    If you have to do certain task several times in a program, you only need to write an appropriate function once
+        program can then use that function wherever needed
+        you can also use the same function in different programs.
+    Helps with readability
+    The divide and conquer approach also allows the part of a program to be developed, tested and debugged independently.
+    The function developed for one program can also if used in another program.
+
+
+                        Debugging-
+Debugging is the process of finding and fixing errors in a program(usually logic errors, but can also include compiler/syntax errors)
+Can range in complexity from fixing simple errors to collecting large amounts of data for analysis.
+The ability to debug by a programmer is an essential skill that can save tremendous amounts of time.
+Maintenance phase is the most expensive phase of the software life cycle.
+
+
+                        Pointers-
+Indirection:
+Pointers are very similar to the concept of Indirection that we employ in your everyday life.
+    Suppose you need to buy a new ink cartridge for your printer.
+    All purchases are handled by the purchasing department
+        You call Joe in purchasing and ask him to order the new cartridge for you
+        Joe then calls the local supply store to order the cartridge
+    You are not ordering the cartridge directly from the supply store yourself(indirection)
+
+In programming languages, indirection is the ability to reference something using a name, reference or container instead of value itself.
+The most common form of indirection is the act of manipulating a value through its memory address.
+A pointer provides an indirect means of accessing the value of a perticular data item
+    A variable whose value is a memory address
+    Its value is the address of another location in memory that can contain a value
